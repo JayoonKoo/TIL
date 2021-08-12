@@ -55,7 +55,7 @@ Promise.all([
 
 모든 프라미스가 처리될 때까지 기다린다. 
 - 응답이 성공한 경우 - `{status: "fulfilled", value: result}`
-- 에러가 발생한 경우 - `{status: "rejected", value: error}`
+- 에러가 발생한 경우 - `{status: "rejected", reason: error}`
 
 `fetch` 로 보낸 여러 요청 중 실패하더라도 성공한 요청은 남아있어야 하는 경우라면
 ```js
