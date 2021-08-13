@@ -222,7 +222,7 @@ const c = leakingAny({ num: 0 });
 
 function leakingAny1(obj: any) {
   const a: number = obj.num;
-  // b 도 any 가 됨
+  // b 도 number 이다. 
   const b = a + 1;
   return b;
 }
