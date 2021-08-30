@@ -272,3 +272,43 @@ sayHi("John"); // Hello, John! (3초후)
 ```
 
 래퍼함수로 감싸고 나면 기존 함수의 프로퍼티 (name, length등 ) 정보가 사라짐.
+
+```js
+function delay(f, ms) {
+  return function () {
+    setTimeout(() => f.apply(this, arguments), ms);
+  };
+}
+
+function sayHi(user) {
+  alert(`Hello, ${user}!`);
+}
+
+alert(sayHi.length); // 1 (함수 정의부에서 명시한 인수의 개수)
+
+sayHi = delay(sayHi, 3000);
+
+alert(sayHi.length); // 0 (래퍼 함수 정의부엔 인수가 없음)
+```
+
+`Proxy` 객체는 타깃 객체에 모든 것을 전달해주므로 훨씬 강력하다.
+
+```js
+function delay(f, ms) {
+  return new Proxy(f, {
+    apply(target, thisArg, args) {
+      setTimeout(() => target.apply(thisArg, args), ms);
+    },
+  });
+}
+
+function sayHi(user) {
+  alert(`Hello, %${user}!`);
+}
+
+sayHi = delay(sayHi, 3000);
+
+alert(sayHi.length); // 1 프락시는 "get length" 연산까지 타깃 객체에 전달해줍니다.
+
+sayHi("John"); // Hello, John! (3초후)
+```
