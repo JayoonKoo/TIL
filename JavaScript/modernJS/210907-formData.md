@@ -41,7 +41,7 @@ let formData = new FormData([form]);
 - `formData.append(name, blob, fileName)` - `<input type="file">` 인 것처럼 추가, 세번째 매개변수인 `fileName`인 진짜 파일 이름을 넣어줌.
 - `formData.delete(name)` - `name`이란 이름으로 추가된 필드를 제거함
 - `formData.get(name)` - `name`이란 이름으로 추가된 필드에 `value` 값을 얻음.
-- `formData.had(name)` - `name`이란 이름으로 추가된 필드가 있다면 ,`true` 반환 아닐 경우 `false` 반환
+- `formData.has(name)` - `name`이란 이름으로 추가된 필드가 있다면 ,`true` 반환 아닐 경우 `false` 반환
 
 formData는 기술적으로 같은 name에 필드를 추가할 수 있다. 따라서 append를 사용한다. 비슷한 역할을 하는 `.set` 메서드도 있다. 이 경우 기존에 있던것을 삭제 하고 추가한다.
 
