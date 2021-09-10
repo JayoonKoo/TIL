@@ -1,6 +1,6 @@
 # Fetch: download progress
 
-fetch 를 사용하면 다운로드 과정을 추적할 수 있다. 현재는 업로드를 추적할 수는 없어서 업로드를 추적하려면 `WMLHttpRequest` 를 사용해야 함.
+fetch 를 사용하면 다운로드 과정을 추적할 수 있다. 현재는 업로드를 추적할 수는 없어서 업로드를 추적하려면 `XMLHttpRequest` 를 사용해야 함.
 
 `response.body` 속성을 사용해서 접근할 수 있다. `ReadableStream`이라는 청크 단위로 제공하는 특수 객체를 이요한다.
 
