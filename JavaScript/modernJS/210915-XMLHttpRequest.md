@@ -10,7 +10,7 @@
 
 ## the basic
 
-`XMLHttpRequest`에는 비동기와 동기 동작이 있다. 주로 사용되는 동기 동작부터 알아본다.
+`XMLHttpRequest`에는 비동기와 동기 동작이 있다. 주로 사용되는 비동기 동작부터 알아본다.
 
 1. `XMLHttpRequest` 생성
 
@@ -198,7 +198,7 @@ xhr.abort();
 
 ## Synchronous requests
 
-`open`에 3번째 파라미터인 `async`에 값이 `false` 로 절정되면 요청이 비동기로 실행될 것이다. 이는 alert 이나 prompt와 같이 실행이 멈춘되 응답을 받으면 다시 실행된다는 것을 의미한다.
+`open`에 3번째 파라미터인 `async`에 값이 `false` 로 절정되면 요청이 동기로 실행될 것이다. 이는 alert 이나 prompt와 같이 실행이 멈춘되 응답을 받으면 다시 실행된다는 것을 의미한다.
 
 ```js
 let xhr = new XMLHttpRequest();
