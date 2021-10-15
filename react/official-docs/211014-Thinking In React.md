@@ -6,7 +6,7 @@ React로 상품들을 검색할 수 있는 데이터 테이블을 만드는 과�
 
 다음과 같은 JSON을 서버로 부터 받았다고 가정하자.
 
-```json
+```
 [
   {category: "Sporting Goods", price: "$49.99", stocked: true, name: "Football"},
   {category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
