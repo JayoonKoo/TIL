@@ -63,3 +63,23 @@ sudo docker run -i -t ubuntu:14.0
 ```
 
 컨테이너에 들어와서 우분투를 사용할 수 있음.
+
+## 애플리케이션 올리기
+
+### 여러가지 명렁어
+
+- `exit()` 도커 이미지 종료 하고 나오기
+- ctrl + p + q 종료는 하지 않고 컨테이너 나오기
+- `docker stop <image name>` 이미지 실행 멈춤
+- `docker images` 로컬 이미지 목록 출력
+- `docker search <image name>` 허브에 도커 이미지 있는지 확인
+- `docker pull <image name>` 이미지 가져오기
+
+### wordpress 실행하기
+
+`docker run --name fs-docker -p 8080:80 -d wordpress`
+
+- fs-docker 이름으로
+- 8080:80 번 포트에 실행
+
+어떻게 사용하는지는 docker hub 사이트에서 해당 이미지 이름을 입력하여 찾아보면 된다.
