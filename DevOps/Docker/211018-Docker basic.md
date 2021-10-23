@@ -70,7 +70,7 @@ sudo docker run -i -t ubuntu:14.0
 
 - `exit()` 도커 이미지 종료 하고 나오기
 - ctrl + p + q 종료는 하지 않고 컨테이너 나오기
-- `docker stop <image name>` 이미지 실행 멈춤
+- `docker stop <container name>` 컨테이너 멈추기
 - `docker images` 로컬 이미지 목록 출력
 - `docker search <image name>` 허브에 도커 이미지 있는지 확인
 - `docker pull <image name>` 이미지 가져오기
